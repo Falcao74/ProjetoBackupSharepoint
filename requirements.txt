@@ -1,0 +1,7 @@
+msal==1.29.0
+requests==2.32.3
+tqdm==4.66.4
+# Para leitura de TOML em Python < 3.11
+tomli==2.0.1
+boto3==1.34.0
+azure-storage-blob==12.21.0
