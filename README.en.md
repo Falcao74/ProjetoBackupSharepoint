@@ -5,7 +5,7 @@
 <br/>
 
 <!-- Replace USER/REPO with your GitHub repository -->
-<img alt="Build" src="https://github.com/USER/REPO/actions/workflows/ci.yml/badge.svg" />
+<img alt="Build" src="https://github.com/Falcao74/ProjetoBackupSharepoint/actions/workflows/ci.yml/badge.svg" />
 
 <img alt="Microsoft" src="https://img.shields.io/badge/Microsoft%20365-Graph-blue?logo=microsoft" />
 <img alt="Python" src="https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white" />
