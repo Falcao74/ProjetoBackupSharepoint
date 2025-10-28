@@ -177,6 +177,27 @@ env\Scripts\python.exe -m unittest tests.test_config_env_fallback
 
 ---
 
+## ⚙️ Executar via GitHub Actions (alternativa)
+
+Este repositório inclui um workflow agendado (`.github/workflows/backup.yml`) que roda diariamente às 03:00 UTC e pode ser acionado manualmente.
+
+### Segredos necessários (Settings → Secrets and variables → Actions)
+- `TENANT_ID` (Azure AD)
+- `CLIENT_ID` (App Registration)
+- `CLIENT_SECRET`
+- Para S3: `S3_BUCKET_NAME`, `S3_REGION_NAME`, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`
+- Para Azure Blob: `AZURE_CONNECTION_STRING`, `AZURE_CONTAINER_NAME`
+- Opcional: `SITES` (lista separada por vírgulas)
+
+### Como usar
+- No `backup.yml`, o backend padrão está como `s3`. Ajuste `BACKUP_BACKEND` para `azure_blob` se preferir.
+- Acesse a aba `Actions` no GitHub para:
+  - Ver o agendamento diário às 03:00 UTC.
+  - Rodar manualmente via botão "Run workflow" (`workflow_dispatch`).
+- Importante: não use `local` como backend no Actions; runners são efêmeros.
+
+---
+
 ## 🛡️ Segurança de Credenciais
 - Nunca faça commit de `credentials.toml`.
 - Prefira variáveis de ambiente ou um vault (Azure Key Vault, etc.).
